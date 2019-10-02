@@ -9,4 +9,8 @@ namespace Multifabriken
             Console.WriteLine("Hello World!");
         }
     }
+    class Pipe
+    {
+        
+    }
 }
