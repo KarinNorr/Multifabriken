@@ -38,9 +38,27 @@ namespace Multifabriken
                 default:
                 break;
             }
+
+            
         }
+        public static int GetInt()
+        {
+                int number = 0;
+                bool loop = true;
+                do
+                {
+                    try
+                    {
+                        number = Convert.ToInt32(Console.ReadLine());
+                        loop = false;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Du kan endast fylla i heltal.");
+                    }
 
-
-
+                }while(loop);
+                return number;
+        }
     }
 }
