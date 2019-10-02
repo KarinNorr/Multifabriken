@@ -22,6 +22,11 @@ namespace Multifabriken
             {
                 material = materialString;
             }
+            public string Content()
+            {
+            string str = "Typ Pipe " + " | " + "Length: "  +  length + " | " + "material: " + material+ " | " + "diameter: " + diameter;
+            return str;
+            }
 
     }
     
