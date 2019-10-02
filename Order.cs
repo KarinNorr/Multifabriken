@@ -10,7 +10,7 @@ namespace Multifabriken
         List<Candy> candy = new List<Candy>(); 
         List<Pipe> pipes = new List<Pipe>(); 
 
-        Customer customer = new Customer;
+        Customer customer = new Customer();
 
         
     }

@@ -39,8 +39,10 @@ namespace Multifabriken
                 break;
             }
 
-            static int GetInt()
-            {
+            
+        }
+        public static int GetInt()
+        {
                 int number = 0;
                 bool loop = true;
                 do
@@ -57,7 +59,6 @@ namespace Multifabriken
 
                 }while(loop);
                 return number;
-            }
         }
     }
 }
