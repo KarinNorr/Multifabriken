@@ -39,11 +39,8 @@ namespace Multifabriken
                 break;
             }
         }
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> da0d49fdfa327b5e8fd452fd1bce8df992f3ac4f
     }
 }
