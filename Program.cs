@@ -23,6 +23,7 @@ namespace Multifabriken
                 case 1:
                 //Här ska hela sortimentet skrivas ut
                 Console.WriteLine("Multifabriken producerar bilar, rör, havremjölk och godis,");
+              
                 Console.WriteLine("Bilar i X olika färger, X modeller. Du kan addera lyxpaket till alla varianter.");
                 Console.WriteLine("Rör finns i valfri diameter och i X antal material. Du väljer själv längden.");
                 Console.WriteLine("Havremjölk med valfri fetthalt och mängd.");
