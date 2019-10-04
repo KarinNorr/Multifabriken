@@ -12,6 +12,11 @@ namespace Multifabriken
         public string Color { get; set; }
         public string Model { get; set; }
         public bool Fancy { get; set; }
+
+        public void SetModel(int index)
+        {
+            Model = availableModels[index];
+        }
         
 
         public string Content()
