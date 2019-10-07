@@ -57,6 +57,7 @@ namespace Multifabriken
 
                     do
                     {
+                        Console.Clear();
                         Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
                         Console.WriteLine("[1] Bil");
                         Console.WriteLine("[2] Rör");
