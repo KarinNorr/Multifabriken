@@ -13,6 +13,7 @@ namespace Multifabriken
         {
             this.length = length;
             this.diameter = diameter;
+            this.material = material;
         }
 
         

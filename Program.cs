@@ -22,7 +22,6 @@ namespace Multifabriken
                 Console.Clear();
                 //Välkomsttext
                 Console.WriteLine("Hej och välkommen till Multifabriken\n");
-                //Console.ReadKey();
                 Console.WriteLine("Du får här 5 alternativ att välja mellan");
                 Console.WriteLine("1: Se hela produktutbudet");
                 Console.WriteLine("2: Gör en beställning");

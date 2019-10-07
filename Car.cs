@@ -17,6 +17,13 @@ namespace Multifabriken
         {
             Model = availableModels[index];
         }
+
+        public Car(string color, string model, bool fancy)
+        {
+            Color = color;
+            Model = model;
+            Fancy = fancy;
+        }
         
 
         public string Content()
