@@ -133,12 +133,12 @@ namespace Multifabriken
                     Console.WriteLine("Följande beställning har du gjort:");
                     
                     // Går igenom och listar oatmilk 
-                    for (int i = 0; i < order.Oatmilk.Length 1++)
+                    for (int i = 0; i < order.GetOatmilk.Count 1++)
                     {
-                        Console.WriteLine(Oatmilk);
+                        Console.WriteLine(Oatmilk.Content);
                     }
                     // Går igenom och listar rör 
-                    for (int i = 0; i < Pipe.Length; i++)
+                    for (int i = 0; i < Pipe.Count; i++)
                     {
                         Console.WriteLine(Pipe);
 
