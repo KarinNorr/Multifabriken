@@ -119,22 +119,23 @@ namespace Multifabriken
 
         public static int GetInt()
         {
-                int number = 0;
-                bool loop = true;
-                do
-                {
-                    try
+            int number = 0;
+            bool loopOne = true;
+            do
+            {
+                try
                     {
                         number = Convert.ToInt32(Console.ReadLine());
-                        loop = false;
+                        loopOne = false;
                     }
                     catch
                     {
                         Console.WriteLine("Du kan endast fylla i heltal.");
                     }
 
-                }while(loop);
-                return number;
+            }while(loopOne);
+            return number;
         }
+        
     }
 }
