@@ -6,12 +6,12 @@ namespace Multifabriken
     class Program
     {
 
-        List<Customer> customers = new List<Customer>();
 
         
 
         static void Main(string[] args)
         {
+            List<Order> orders = new List<Order>();
             bool createOrder = false;
             bool run = true;
 
@@ -41,6 +41,7 @@ namespace Multifabriken
                     break;
 
                     case 2:
+                    Order order = new Order(GenerateOrderNumber(), "active");
                     //Här ska kunden kunna göra sin beställning
                     createOrder = true;
                     Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
@@ -56,7 +57,11 @@ namespace Multifabriken
                         
                         switch (productSelected)
                         {
+
+                            // Lägger till bil.
                             case 1:
+
+                            Console.WriteLine("Lägger till bil i beställning:");
                             Console.WriteLine("Välj bilens egenskaper:");
                             Console.Write("Färg: ");
                             string color = Console.ReadLine();
@@ -66,13 +71,45 @@ namespace Multifabriken
                             Console.Write("Lyx [Ja/Nej]: ");
                             bool fancy = GetInputBool(Console.ReadLine());
                             
+                            order.AddCar(color, model, fancy);
+
+                            orders.Add(order);
+                            
+                            
                             break;
+
+                            // Lägg till rör.
                             case 2:
+                            Console.WriteLine("Lägger till rör beställning:");
+                            Console.Write("Längd: ");
+                            int length = GetInt();
+                            Console.Write("Diameter: ");
+                            int diameter = GetInt();
+                            Console.Write("Material [Metall/Plast/Betong]: ");
+                            string material = Console.ReadLine();
+
+                            order.AddPipe(length, diameter, material);
 
                             break;
+
+                            // Lägg till havremjölk.
                             case 3:
+                            Console.WriteLine("Lägger till havremjölk i beställning:");
+                            Console.Write("Fetthalt: ");
+                            int fatPercentage = GetInt();
+                            Console.Write("Mängd i liter: ");
+                            int amountInLiters = GetInt();
+                            order.AddOatMilk(fatPercentage, amountInLiters);
                             break;
+
+                            // Lägger till godis.
                             case 4:
+                            Console.WriteLine("Lägger till godis i beställning:");
+                            Console.Write("Smak: ");
+                            string flavour = Console.ReadLine();
+                            Console.Write("Vikt i Hg: ");
+                            int weight = GetInt();
+                            order.AddCandy(flavour, weight);
                             break;
                             default:
                             Console.WriteLine("Fel vid inmatning");
@@ -99,6 +136,7 @@ namespace Multifabriken
                     //Detta alternativ avslutar programmet
                     run = false;
                     Console.WriteLine("Programmet avslutas. Välkommen åter!");
+                    Console.ReadKey();
                     return;
 
                     default:
