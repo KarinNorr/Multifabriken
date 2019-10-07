@@ -33,8 +33,7 @@ namespace Multifabriken
                 {
                     case 1:
                     //Här ska hela sortimentet skrivas ut
-                    Console.WriteLine("Multifabriken producerar bilar, rör, havremjölk och godis,");
-                
+                    Console.WriteLine("Multifabriken producerar bilar, rör, havremjölk och godis,");                
                     Console.WriteLine("Bilar i X olika färger, X modeller. Du kan addera lyxpaket till alla varianter.");
                     Console.WriteLine("Rör finns i valfri diameter och i X antal material. Du väljer själv längden.");
                     Console.WriteLine("Havremjölk med valfri fetthalt och mängd.");
@@ -92,7 +91,16 @@ namespace Multifabriken
                     break;
                     
                     case 4:
-                    //Detta alternativ tar bort en inmatad beställning
+                    //Detta alternativ tömmer ordern på produkter
+                    {
+                    Console.WriteLine("[1] Töm godislistan");
+                    Console.WriteLine("[2] Töm billistan");
+                    Console.WriteLine("[3] Töm rörlistan");
+                    Console.WriteLine("[4] Töm havremjölkslistan");
+                    Console.WriteLine("[5] Töm alla listor");
+                    int listSelect = GetInt();
+                    order.ClearList(listSelect);                
+                    }
                     break;
                     
                     case 5:
@@ -141,6 +149,7 @@ namespace Multifabriken
             }while(loopOne);
             return number;
         }
+        
         
     }
 }
