@@ -199,11 +199,11 @@ namespace Multifabriken
                     case 4:
                     //Detta alternativ tömmer ordern på produkter
                     {
-                    Console.WriteLine("[1] Töm godislistan");
-                    Console.WriteLine("[2] Töm billistan");
-                    Console.WriteLine("[3] Töm rörlistan");
-                    Console.WriteLine("[4] Töm havremjölkslistan");
-                    Console.WriteLine("[5] Töm alla listor");
+                    Console.WriteLine("[1] Ta bort godis");
+                    Console.WriteLine("[2] Ta bort bil");
+                    Console.WriteLine("[3] Ta bort rör");
+                    Console.WriteLine("[4] Ta bort havremjölk");
+                    Console.WriteLine("[5] Töm alla varor");
                     int listSelect = GetInt();
                     order.ClearList(order,listSelect);                
                     }
