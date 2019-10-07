@@ -15,11 +15,18 @@ namespace Multifabriken
         int orderNumber = 0;
         string status;
 
+        public List<Oatmilk> GetOatmilk()
+        {
+            return oatmilk;
+        }
+
         public Order(int orderNumber, string status)
         {
             this.orderNumber = orderNumber;
             this.status = status;
         }
+
+
 
 
     }
