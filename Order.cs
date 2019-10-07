@@ -10,18 +10,26 @@ namespace Multifabriken
         List<Candy> candy = new List<Candy>(); 
         List<Pipe> pipes = new List<Pipe>(); 
 
-        Customer customer = new Customer();
+        public Order(int orderNumber, string status)
+        {   
+                this.orderNumber = orderNumber;
+                this.status = status;
+        }   
 
         int orderNumber = 0;
         string status;
 
-        public Order(int orderNumber, string status)
+        public List<Oatmilk> GetOatmilk()
         {
-            this.orderNumber = orderNumber;
-            this.status = status;
+            return oatmilk;
+        }      
+        
+        public List<Car> GetCars()
+        {
+            return cars;
         }
         //Metod för att tömma listorna
-        public void ClearList(Order order)
+        public void ClearList(Order order, int listSelect)
         {
              switch (listSelect)
              {
@@ -46,9 +54,7 @@ namespace Multifabriken
                  break;
                 
                  //Tömmer alla listor
-                 case 5:
-                 for (int i =)
-                 break;
+                
 
                  default:
                  break;
@@ -59,7 +65,22 @@ namespace Multifabriken
 
         }
         
+     
 
+        public List<Candy> GetCandy()
+        {
+            return candy;
+        }
 
+        public List<Pipe> GetPipes()
+        {
+            return pipes;
+        }
     }
 }
+
+            
+
+        
+
+
