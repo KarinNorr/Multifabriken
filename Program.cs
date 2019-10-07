@@ -11,7 +11,7 @@ namespace Multifabriken
 
         static void Main(string[] args)
         {
-            List<Order> orders = new List<Order>();
+            Order order = new Order(GenerateOrderNumber(), "active");
             bool createOrder = false;
             bool run = true;
 
@@ -41,7 +41,7 @@ namespace Multifabriken
                     break;
 
                     case 2:
-                    Order order = new Order(GenerateOrderNumber(), "active");
+                    
                     //Här ska kunden kunna göra sin beställning
                     createOrder = true;
                     Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
@@ -71,10 +71,7 @@ namespace Multifabriken
                             Console.Write("Lyx [Ja/Nej]: ");
                             bool fancy = GetInputBool(Console.ReadLine());
                             
-                            order.AddCar(color, model, fancy);
-
-                            orders.Add(order);
-                            
+                            order.AddCar(color, model, fancy);                            
                             
                             break;
 
