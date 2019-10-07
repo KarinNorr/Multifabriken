@@ -160,10 +160,7 @@ namespace Multifabriken
 
                     }
 
-
-                    
                     // Går igenom och listar rör 
-                    
                     List<Pipe> pipe = order.GetPipes();
 
                     if (pipe.Count != 0)
@@ -171,10 +168,8 @@ namespace Multifabriken
                     {
                         Console.WriteLine(pipe[i].Content());
                     }
-                    
 
                     // Går igenom och listar godis 
-                    
                     List<Candy> candy = order.GetCandy();
                     
                     if (candy.Count != 0)
@@ -183,8 +178,7 @@ namespace Multifabriken
                         Console.WriteLine(candy[i].Content());
                     }
                     
-                    // Går igenom och listar bilar 
-                    
+                    // Går igenom och listar bilar                     
                     List<Car> car = order.GetCars();
                     
                     if (car.Count != 0)
@@ -246,6 +240,7 @@ namespace Multifabriken
             {
                 try
                     {
+                        Console.Write(">>");
                         number = Convert.ToInt32(Console.ReadLine());
                         loopOne = false;
                     }
