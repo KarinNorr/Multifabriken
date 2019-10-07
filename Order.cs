@@ -19,6 +19,18 @@ namespace Multifabriken
         {
             return oatmilk;
         }
+        public List<Pipe> GetPipes()
+        {
+            return pipes;
+        }
+        public List<Candy> GetCandy()
+        {
+            return candy;
+        }
+        public List<Car> GetCars()
+        {
+            return cars;
+        }
 
         public Order(int orderNumber, string status)
         {

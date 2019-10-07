@@ -133,25 +133,47 @@ namespace Multifabriken
                     Console.WriteLine("Följande beställning har du gjort:");
                     
                     // Går igenom och listar oatmilk 
-                    for (int i = 0; i < order.GetOatmilk.Count 1++)
+                    // Hämtar en kopia av listan från klassen order
+                    // Det gör att vi slipper gå via orderobjektet och komprimerar koden. 
+                    // Riskerar heller inte att ändra något i beställningen
+                    List<Oatmilk> oatmilk = order.GetOatmilk();
+
+                    //loopar igenom listan oatmilk. 
+                    // Indexerar listan och kör metoden content på varje element i listan. 
+                    // Metoden content ligger i varje klass.  
+                    for (int i = 0; i < oatmilk.Count; i++)
                     {
-                        Console.WriteLine(Oatmilk.Content);
+                        Console.WriteLine(oatmilk[i].Content());
                     }
+
+                    
                     // Går igenom och listar rör 
-                    for (int i = 0; i < Pipe.Count; i++)
+                    
+                    List<Pipe> pipe = order.GetPipes();
+
+                    for (int i = 0; i < pipe.Count; i++)
                     {
-                        Console.WriteLine(Pipe);
+                        Console.WriteLine(pipe[i].Content());
 
                     }
+                    
+
                     // Går igenom och listar godis 
-                    for (int i = 0; i < Candy.Length; i++)
+                    
+                    List<Candy> candy = order.GetCandy();
+                    
+                    for (int i = 0; i < candy.Count; i++)
                     {
-                        Console.WriteLine(Candy);
+                        Console.WriteLine(candy[i].Content());
                     }
+                    
                     // Går igenom och listar bilar 
-                    for (int i = 0; i < Car.Length i++)
+                    
+                    List<Car> car = order.GetCars();
+                    
+                    for (int i = 0; i < car.Count; i++)
                     {
-                        Console.WriteLine(Car);
+                        Console.WriteLine(car);
                     }
 
                     break;
