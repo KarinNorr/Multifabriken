@@ -31,7 +31,7 @@ namespace Multifabriken
 
                 Console.Write("Nu kan du göra ditt val: ");
                 //Tar emot användarens menyval.
-                int nr = Convert.ToInt32(Console.ReadLine());
+                int nr = GetInt();
                 
                 //Switch över huvudmenyn
                 switch (nr)
@@ -52,17 +52,18 @@ namespace Multifabriken
                     
                     //Här ska kunden kunna göra sin beställning
                     createOrder = true;
-                    Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
-                    Console.WriteLine("[1] Bil");
-                    Console.WriteLine("[2] Rör");
-                    Console.WriteLine("[3] Havremjölk");
-                    Console.WriteLine("[4] Godis");
-                    Console.WriteLine("[5] Tillbaka...");
+                    
 
-                    Console.Write(">>");
 
                     do
                     {
+                        Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
+                        Console.WriteLine("[1] Bil");
+                        Console.WriteLine("[2] Rör");
+                        Console.WriteLine("[3] Havremjölk");
+                        Console.WriteLine("[4] Godis");
+                        Console.WriteLine("[5] Tillbaka...");
+                        Console.Write(">>");    
                         int productSelected = GetInt();
                         
                         switch (productSelected)
