@@ -3,8 +3,14 @@ namespace Multifabriken
 {
     class Candy
     {
-        public int Flavor { get; set; }
+        public string Flavor { get; set; }
         public int Amount { get; set; }
+
+        public Candy(string flavour, int amount)
+        {
+            Flavor = flavour;
+            Amount = amount;
+        }
 
         public string Content()
         {

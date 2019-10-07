@@ -5,9 +5,9 @@ namespace Multifabriken
 {
     class Order
     {
-        List<Oatmilk> oatmilk = new List<Oatmilk>(); 
+        List<Oatmilk> oatmilks = new List<Oatmilk>(); 
         List<Car> cars = new List<Car>(); 
-        List<Candy> candy = new List<Candy>(); 
+        List<Candy> sweets = new List<Candy>(); 
         List<Pipe> pipes = new List<Pipe>(); 
 
         public Order(int orderNumber, string status)
@@ -21,7 +21,7 @@ namespace Multifabriken
 
         public List<Oatmilk> GetOatmilk()
         {
-            return oatmilk;
+            return oatmilks;
         }      
         
         public List<Car> GetCars()
@@ -29,47 +29,10 @@ namespace Multifabriken
             return cars;
         }
         //Metod för att tömma listorna
-        public void ClearList(Order order, int listSelect)
-        {
-             switch (listSelect)
-             {
-                 //Tömmer godislistan
-                 case 1:
-                 candy.Clear();
-                 break;
-
-                 //Tömmer billistan
-                 case 2:
-                 cars.Clear(); 
-                 break;
-
-                 //Tömmer rörlistan
-                 case 3:
-                 pipes.Clear(); 
-                 break;
-
-                 //Tömmer havremjölkslistan
-                 case 4:
-                 oatmilk.Clear(); 
-                 break;
-                
-                 //Tömmer alla listor
-                
-
-                 default:
-                 break;
-             }
-
-
-
-
-        }
         
-     
-
         public List<Candy> GetCandy()
         {
-            return candy;
+            return sweets;
         }
 
         public List<Pipe> GetPipes()
@@ -79,7 +42,7 @@ namespace Multifabriken
         public void AddCandy(string flavour, int weight)
         {
             Candy candy = new Candy(flavour, weight);
-            candy.Add(candy);
+            sweets.Add(candy);
         }
         public void AddCar(string color, string model, bool fancy)
         {
@@ -94,7 +57,38 @@ namespace Multifabriken
         public void AddOatmilk(int fatPercentage, int amountInLiters)
         {
             Oatmilk oatmilk = new Oatmilk(fatPercentage, amountInLiters);
-            oatmilk.Add(oatmilk);
+            oatmilks.Add(oatmilk);
+        }
+        public void ClearList(Order order, int listSelect)
+        {
+             switch (listSelect)
+             {
+                 //Tömmer godislistan
+                 case 1:
+                 sweets.Clear();
+                 break;
+
+                 //Tömmer billistan
+                 case 2:
+                 cars.Clear(); 
+                 break;
+
+                 //Tömmer rörlistan
+                 case 3:
+                 pipes.Clear(); 
+                 break;
+
+                 //Tömmer havremjölkslistan
+                 case 4:
+                 oatmilks.Clear(); 
+                 break;
+                
+                 //Tömmer alla listor
+                
+
+                 default:
+                 break;
+             }
         }
     }
 }

@@ -57,6 +57,8 @@ namespace Multifabriken
                     Console.WriteLine("[2] Rör");
                     Console.WriteLine("[3] Havremjölk");
                     Console.WriteLine("[4] Godis");
+                    Console.WriteLine("[5] Tillbaka...");
+
                     Console.Write(">>");
 
                     do
@@ -116,8 +118,14 @@ namespace Multifabriken
                             int weight = GetInt();
                             order.AddCandy(flavour, weight);
                             break;
+
+                            case 5:
+                            createOrder = false;
+                            break;
+
                             default:
                             Console.WriteLine("Fel vid inmatning");
+                            
                             break;
                         }
 
@@ -184,6 +192,7 @@ namespace Multifabriken
                     {
                         Console.WriteLine(car[i].Content());
                     }
+                    Console.ReadKey();
 
                     break;
                     
@@ -196,7 +205,7 @@ namespace Multifabriken
                     Console.WriteLine("[4] Töm havremjölkslistan");
                     Console.WriteLine("[5] Töm alla listor");
                     int listSelect = GetInt();
-                    order.ClearList(order, listSelect);                
+                    order.ClearList(order,listSelect);                
                     }
                     break;
                     
