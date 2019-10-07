@@ -155,24 +155,30 @@ namespace Multifabriken
             else { return false; }
         }
 
+        
+        
         public static int GetInt()
+        //Funktion som tar in en string, konverterar den till en int och returnerar den.
+        //Innehåller en do-while-loop som kör en try/catch.
+        //Om användaren skriver in något annat än ett heltal får man försöka igen. 
         {
-                int number = 0;
-                bool loop = true;
-                do
-                {
-                    try
+            int number = 0;
+            bool loopOne = true;
+            do
+            {
+                try
                     {
                         number = Convert.ToInt32(Console.ReadLine());
-                        loop = false;
+                        loopOne = false;
                     }
                     catch
                     {
                         Console.WriteLine("Du kan endast fylla i heltal.");
                     }
 
-                }while(loop);
-                return number;
+            }while(loopOne);
+            return number;
         }
+        
     }
 }
