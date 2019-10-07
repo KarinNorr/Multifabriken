@@ -31,7 +31,7 @@ namespace Multifabriken
 
                 Console.Write("Nu kan du göra ditt val: ");
                 //Tar emot användarens menyval.
-                int nr = Convert.ToInt32(Console.ReadLine());
+                int nr = GetInt();
                 
                 //Switch över huvudmenyn
                 switch (nr)
@@ -52,6 +52,7 @@ namespace Multifabriken
                     
                     //Här ska kunden kunna göra sin beställning
                     createOrder = true;
+                    Console.Clear();
                     Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
                     Console.WriteLine("[1] Bil");
                     Console.WriteLine("[2] Rör");
@@ -251,7 +252,12 @@ namespace Multifabriken
                     }
                     catch
                     {
-                        Console.WriteLine("Du kan endast fylla i heltal.");
+                        Console.Clear();
+                        Console.WriteLine("Du kan endast fylla i heltal.\n");
+                        Console.Write("Tryck på valfri tangent för att återgå till menyn.");
+                        Console.ReadKey();
+                        //
+                        loopOne = false;
                     }
 
             }while(loopOne);
