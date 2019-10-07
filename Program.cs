@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Multifabriken
 {
     class Program
     {
+
+        List<Customer> customers = new List<Customer>();
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hej och välkommen till Multifabriken");
