@@ -84,8 +84,13 @@ namespace Multifabriken
                  break;
                 
                  //Tömmer alla listor
+                 case 5:
+                 sweets.Clear();
+                 cars.Clear(); 
+                 pipes.Clear(); 
+                 oatmilks.Clear();                  
+                 break;
                 
-
                  default:
                  break;
              }

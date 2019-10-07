@@ -52,18 +52,18 @@ namespace Multifabriken
                     
                     //Här ska kunden kunna göra sin beställning
                     createOrder = true;
-                    Console.Clear();
-                    Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
-                    Console.WriteLine("[1] Bil");
-                    Console.WriteLine("[2] Rör");
-                    Console.WriteLine("[3] Havremjölk");
-                    Console.WriteLine("[4] Godis");
-                    Console.WriteLine("[5] Tillbaka...");
+                    
 
-                    Console.Write(">>");
 
                     do
                     {
+                        Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
+                        Console.WriteLine("[1] Bil");
+                        Console.WriteLine("[2] Rör");
+                        Console.WriteLine("[3] Havremjölk");
+                        Console.WriteLine("[4] Godis");
+                        Console.WriteLine("[5] Tillbaka...");
+                        Console.Write(">>");    
                         int productSelected = GetInt();
                         
                         switch (productSelected)
@@ -161,10 +161,7 @@ namespace Multifabriken
 
                     }
 
-
-                    
                     // Går igenom och listar rör 
-                    
                     List<Pipe> pipe = order.GetPipes();
 
                     if (pipe.Count != 0)
@@ -172,10 +169,8 @@ namespace Multifabriken
                     {
                         Console.WriteLine(pipe[i].Content());
                     }
-                    
 
                     // Går igenom och listar godis 
-                    
                     List<Candy> candy = order.GetCandy();
                     
                     if (candy.Count != 0)
@@ -184,8 +179,7 @@ namespace Multifabriken
                         Console.WriteLine(candy[i].Content());
                     }
                     
-                    // Går igenom och listar bilar 
-                    
+                    // Går igenom och listar bilar                     
                     List<Car> car = order.GetCars();
                     
                     if (car.Count != 0)
@@ -200,11 +194,11 @@ namespace Multifabriken
                     case 4:
                     //Detta alternativ tömmer ordern på produkter
                     {
-                    Console.WriteLine("[1] Töm godislistan");
-                    Console.WriteLine("[2] Töm billistan");
-                    Console.WriteLine("[3] Töm rörlistan");
-                    Console.WriteLine("[4] Töm havremjölkslistan");
-                    Console.WriteLine("[5] Töm alla listor");
+                    Console.WriteLine("[1] Ta bort godis");
+                    Console.WriteLine("[2] Ta bort bil");
+                    Console.WriteLine("[3] Ta bort rör");
+                    Console.WriteLine("[4] Ta bort havremjölk");
+                    Console.WriteLine("[5] Töm alla varor");
                     int listSelect = GetInt();
                     order.ClearList(order,listSelect);                
                     }
@@ -247,6 +241,7 @@ namespace Multifabriken
             {
                 try
                     {
+                        Console.Write(">>");
                         number = Convert.ToInt32(Console.ReadLine());
                         loopOne = false;
                     }
