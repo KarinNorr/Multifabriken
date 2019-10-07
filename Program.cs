@@ -11,7 +11,9 @@ namespace Multifabriken
 
         static void Main(string[] args)
         {
-            Order order = new Order(GenerateOrderNumber(), "active");
+            Random slump = new Random();
+            int ordernumber = slump.Next(1,5000);
+            Order order = new Order(ordernumber, "active");
             bool createOrder = false;
             bool run = true;
 
@@ -138,23 +140,29 @@ namespace Multifabriken
                     // Riskerar heller inte att ändra något i beställningen
                     List<Oatmilk> oatmilk = order.GetOatmilk();
 
+                    if (oatmilk.Count != 0)
+                    {
                     //loopar igenom listan oatmilk. 
                     // Indexerar listan och kör metoden content på varje element i listan. 
                     // Metoden content ligger i varje klass.  
-                    for (int i = 0; i < oatmilk.Count; i++)
-                    {
+                    
+                        for (int i = 0; i < oatmilk.Count; i++)
+                        {
                         Console.WriteLine(oatmilk[i].Content());
+                        }
+
                     }
+
 
                     
                     // Går igenom och listar rör 
                     
                     List<Pipe> pipe = order.GetPipes();
 
+                    if (pipe.Count != 0)
                     for (int i = 0; i < pipe.Count; i++)
                     {
                         Console.WriteLine(pipe[i].Content());
-
                     }
                     
 
@@ -162,6 +170,7 @@ namespace Multifabriken
                     
                     List<Candy> candy = order.GetCandy();
                     
+                    if (candy.Count != 0)
                     for (int i = 0; i < candy.Count; i++)
                     {
                         Console.WriteLine(candy[i].Content());
@@ -171,9 +180,10 @@ namespace Multifabriken
                     
                     List<Car> car = order.GetCars();
                     
+                    if (car.Count != 0)
                     for (int i = 0; i < car.Count; i++)
                     {
-                        Console.WriteLine(car);
+                        Console.WriteLine(car[i].Content());
                     }
 
                     break;
