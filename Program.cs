@@ -209,8 +209,6 @@ namespace Multifabriken
         }
 
         public static bool GetInputBool(string input)
-        //Metoden tar in en string och gör om den från gemener till versaler.
-        //Om första bokstaven är ett "j" returneras boolen false.
         {
             string lowerCaseInput = input.ToLower();
             if (lowerCaseInput[0] == 'j') { return true; }
