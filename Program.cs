@@ -89,6 +89,30 @@ namespace Multifabriken
                     
                     case 3:
                     //Här kan kunden få hela sin beställning utskriven
+                    Console.WriteLine("Följande beställning har du gjort:");
+                    
+                    // Går igenom och listar oatmilk 
+                    for (int i = 0; i < order.Oatmilk.Length 1++)
+                    {
+                        Console.WriteLine(Oatmilk);
+                    }
+                    // Går igenom och listar rör 
+                    for (int i = 0; i < Pipe.Length; i++)
+                    {
+                        Console.WriteLine(Pipe);
+
+                    }
+                    // Går igenom och listar godis 
+                    for (int i = 0; i < Candy.Length; i++)
+                    {
+                        Console.WriteLine(Candy);
+                    }
+                    // Går igenom och listar bilar 
+                    for (int i = 0; i < Car.Length i++)
+                    {
+                        Console.WriteLine(Car);
+                    }
+
                     break;
                     
                     case 4:
