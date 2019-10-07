@@ -104,7 +104,7 @@ namespace Multifabriken
                             int fatPercentage = GetInt();
                             Console.Write("Mängd i liter: ");
                             int amountInLiters = GetInt();
-                            order.AddOatMilk(fatPercentage, amountInLiters);
+                            order.AddOatmilk(fatPercentage, amountInLiters);
                             break;
 
                             // Lägger till godis.
@@ -196,7 +196,7 @@ namespace Multifabriken
                     Console.WriteLine("[4] Töm havremjölkslistan");
                     Console.WriteLine("[5] Töm alla listor");
                     int listSelect = GetInt();
-                    order.ClearList(listSelect);                
+                    order.ClearList(order, listSelect);                
                     }
                     break;
                     
