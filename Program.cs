@@ -248,7 +248,12 @@ namespace Multifabriken
                     }
                     catch
                     {
-                        Console.WriteLine("Du kan endast fylla i heltal.");
+                        Console.Clear();
+                        Console.WriteLine("Du kan endast fylla i heltal.\n");
+                        Console.Write("Tryck på valfri tangent för att återgå till menyn.");
+                        Console.ReadKey();
+                        //
+                        loopOne = false;
                     }
 
             }while(loopOne);
