@@ -15,30 +15,31 @@ namespace Multifabriken
         int orderNumber = 0;
         string status;
 
-        public List<Oatmilk> GetOatmilk()
-        {
-            return oatmilk;
-        }
-        public List<Pipe> GetPipes()
-        {
-            return pipes;
-        }
-        public List<Candy> GetCandy()
-        {
-            return candy;
-        }
-        public List<Car> GetCars()
-        {
-            return cars;
-        }
-
         public Order(int orderNumber, string status)
         {
             this.orderNumber = orderNumber;
             this.status = status;
         }
-
-
+        public void AddCar(string color, string model, bool fancy)
+        {
+            Car car = new Car(color, model, fancy);
+            cars.Add(car);
+        }
+        public void AddCandy(string flavour, int weight)
+        {
+            Candy candy = new Candy(flavour, weight);
+            candy.Add(candy);
+        }
+        public void AddPipe(int length, int diameter, string material)
+        {
+            Pipe pipe = new Pipe(length, diameter, material);
+            pipes.Add(pipe);
+        }
+        public void AddOatMilk(int fatPercentage, int amountInLiters)
+        {
+            Oatmilk oatmilk = new Oatmilk(fatPercentage, amountInLiters);
+            oatmilk.Add(oatmilk);
+        }
 
 
     }
