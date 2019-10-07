@@ -35,7 +35,33 @@ namespace Multifabriken
 
                 case 2:
                 //Här ska kunden kunna göra sin beställning
-                Console.WriteLine("Skriv in din beställning här:");
+                Console.WriteLine("Skriv in din beställning här genom att välja produkt:");
+                Console.WriteLine("[1] Bil");
+                Console.WriteLine("[2] Rör");
+                Console.WriteLine("[3] Havremjölk");
+                Console.WriteLine("[4] Godis");
+                Console.Write(">>");
+
+                int productSelected = GetInt();
+
+                switch (productSelected)
+                {
+                    case 1:
+                    break;
+                    case 2:
+                    break;
+                    case 3:
+                    break;
+                    case 4:
+                    break;
+                    default:
+                    Console.WriteLine("Fel vid inmatning");
+                    break;
+                }
+
+
+
+
                 Console.ReadKey();
                 //vi ska spara in beställningen som ett objekt ur sin klass och in i korrekt lista
                 break;
