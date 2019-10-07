@@ -117,7 +117,12 @@ namespace Multifabriken
             else { return false; }
         }
 
+        
+        
         public static int GetInt()
+        //Funktion som tar in en string, konverterar den till en int och returnerar den.
+        //Innehåller en do-while-loop som kör en try/catch.
+        //Om användaren skriver in något annat än ett heltal får man försöka igen. 
         {
             int number = 0;
             bool loopOne = true;
