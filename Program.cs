@@ -16,9 +16,11 @@ namespace Multifabriken
             bool run = true;
 
             do
-            {    
-                Console.WriteLine("Hej och välkommen till Multifabriken");
-                Console.ReadKey();
+            {   
+                Console.Clear();
+                //Välkomsttext
+                Console.WriteLine("Hej och välkommen till Multifabriken\n");
+                //Console.ReadKey();
                 Console.WriteLine("Du får här 5 alternativ att välja mellan");
                 Console.WriteLine("1: Se hela produktutbudet");
                 Console.WriteLine("2: Gör en beställning");
@@ -26,18 +28,23 @@ namespace Multifabriken
                 Console.WriteLine("4: Ta bort en produkt från din beställning");
                 Console.WriteLine("5: Avsluta programmet");
 
-                Console.WriteLine("Nu kan du göra ditt val:");
+                Console.Write("Nu kan du göra ditt val: ");
+                //Tar emot användarens menyval.
                 int nr = Convert.ToInt32(Console.ReadLine());
                 
+                //Switch över huvudmenyn
                 switch (nr)
                 {
                     case 1:
                     //Här ska hela sortimentet skrivas ut
+                    Console.Clear();
                     Console.WriteLine("Multifabriken producerar bilar, rör, havremjölk och godis,");
                 
                     Console.WriteLine("Bilar i X olika färger, X modeller. Du kan addera lyxpaket till alla varianter.");
                     Console.WriteLine("Rör finns i valfri diameter och i X antal material. Du väljer själv längden.");
-                    Console.WriteLine("Havremjölk med valfri fetthalt och mängd.");
+                    Console.WriteLine("Havremjölk med valfri fetthalt och mängd.\n");
+                    Console.Write("Tryck på valfri tangent för att återgå till huvudmenyn.");
+                    Console.ReadKey();
                     break;
 
                     case 2:
@@ -98,6 +105,7 @@ namespace Multifabriken
                     case 5:
                     //Detta alternativ avslutar programmet
                     run = false;
+                    Console.Clear();
                     Console.WriteLine("Programmet avslutas. Välkommen åter!");
                     return;
 
@@ -122,7 +130,7 @@ namespace Multifabriken
         public static int GetInt()
         //Funktion som tar in en string, konverterar den till en int och returnerar den.
         //Innehåller en do-while-loop som kör en try/catch.
-        //Om användaren skriver in något annat än ett heltal får man försöka igen. 
+        //Om användaren skriver in något annat än ett heltal får man försöka. 
         {
             int number = 0;
             bool loopOne = true;
