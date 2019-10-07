@@ -76,6 +76,26 @@ namespace Multifabriken
         {
             return pipes;
         }
+        public void AddCandy(int flavour, int weight)
+        {
+            Candy candy = new Candy(flavour, weight);
+            candy.Add(candy);
+        }
+        public void AddCar(string color, string model, bool fancy)
+        {
+            Car car = new Car(color, model, fancy);
+            cars.Add(car);
+        }
+        public void AddPipes(int length, int diameter, string material)
+        {
+            Pipe pipe = new Pipe(length, diameter, material);
+            pipes.Add(pipe);
+        }
+        public void AddOatmilk(int fatPercentage, int amountInLiters)
+        {
+            Oatmilk oatmilk = new Oatmilk(fatPercentage, amountInLiters);
+            oatmilk.Add(oatmilk);
+        }
     }
 }
 
