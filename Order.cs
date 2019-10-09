@@ -10,13 +10,13 @@ namespace Multifabriken
         List<Candy> sweets = new List<Candy>(); 
         List<Pipe> pipes = new List<Pipe>(); 
 
-        int orderNumber = 0;
-        string status;
+        public int OrderNumber { get; set; }
+        public string Status { get; set; }
 
         public Order(int orderNumber, string status)
         {   
-                this.orderNumber = orderNumber;
-                this.status = status;
+                OrderNumber = orderNumber;
+                Status = status;
         }   
 
         public List<Oatmilk> GetOatmilk()
@@ -62,7 +62,7 @@ namespace Multifabriken
             Oatmilk oatmilk = new Oatmilk(fatPercentage, amountInLiters);
             oatmilks.Add(oatmilk);
         }
-        public void ClearList(Order order, int listSelect)
+        public void ClearList(int listSelect)
         {
              switch (listSelect)
              {
