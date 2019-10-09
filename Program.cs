@@ -192,7 +192,7 @@ namespace Multifabriken
                     Console.WriteLine("[4] Ta bort havremjölk");
                     Console.WriteLine("[5] Töm alla varor");
                     int listSelect = GetInt();
-                    order.ClearList(order,listSelect);                
+                    order.ClearList(listSelect);                
                     }
                     break;
                     
