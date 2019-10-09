@@ -5,10 +5,6 @@ namespace Multifabriken
 {
     class Program
     {
-
-
-        
-
         static void Main(string[] args)
         {
             Random slump = new Random();

@@ -3,12 +3,7 @@ namespace Multifabriken
 {
     class Oatmilk
     {
-        private int myVar;
-        public int MyProperty
-        {
-            get { return myVar; }
-            set { myVar = value; }
-        }
+        private int defaultFat = 30;
         
         private int fat;
         public int Fat
@@ -17,6 +12,7 @@ namespace Multifabriken
             set
             {
                 if (value <= 80) { fat = value; }
+                else { fat = defaultFat; }
             }
         }
         public int Amount { get; set; }
