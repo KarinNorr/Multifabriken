@@ -10,14 +10,14 @@ namespace Multifabriken
         List<Candy> sweets = new List<Candy>(); 
         List<Pipe> pipes = new List<Pipe>(); 
 
+        int orderNumber = 0;
+        string status;
+
         public Order(int orderNumber, string status)
         {   
                 this.orderNumber = orderNumber;
                 this.status = status;
         }   
-
-        int orderNumber = 0;
-        string status;
 
         public List<Oatmilk> GetOatmilk()
         {
@@ -28,8 +28,7 @@ namespace Multifabriken
         {
             return cars;
         }
-        //Metod för att tömma listorna
-        
+
         public List<Candy> GetCandy()
         {
             return sweets;
@@ -39,21 +38,25 @@ namespace Multifabriken
         {
             return pipes;
         }
+
         public void AddCandy(string flavour, int weight)
         {
             Candy candy = new Candy(flavour, weight);
             sweets.Add(candy);
         }
+
         public void AddCar(string color, string model, bool fancy)
         {
             Car car = new Car(color, model, fancy);
             cars.Add(car);
         }
+
         public void AddPipe(int length, int diameter, string material)
         {
             Pipe pipe = new Pipe(length, diameter, material);
             pipes.Add(pipe);
         }
+        
         public void AddOatmilk(int fatPercentage, int amountInLiters)
         {
             Oatmilk oatmilk = new Oatmilk(fatPercentage, amountInLiters);

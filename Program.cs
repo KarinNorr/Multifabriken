@@ -48,9 +48,6 @@ namespace Multifabriken
                     
                     //Här ska kunden kunna göra sin beställning
                     createOrder = true;
-                    
-
-
                     do
                     {
                         Console.Clear();
@@ -129,12 +126,10 @@ namespace Multifabriken
 
                     }while(createOrder);
 
-
                     Console.ReadKey();
                     //vi ska spara in beställningen som ett objekt ur sin klass och in i korrekt lista
                     break;
 
-                    
                     case 3:
                     //Här kan kunden få hela sin beställning utskriven
                     Console.WriteLine("Följande beställning har du gjort:");
