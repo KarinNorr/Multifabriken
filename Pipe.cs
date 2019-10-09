@@ -4,30 +4,30 @@ namespace Multifabriken
 {
     class Pipe
     {
-        public int length;
-        public int diameter;
-        public string material;
+        public int Length { get; set; }
+        public int Diameter { get; set; }
+        public string Material { get; set; }
 
         
         public Pipe(int length, int diameter, string material)
         {
-            this.length = length;
-            this.diameter = diameter;
-            this.material = material;
+            Length = length;
+            Diameter = diameter;
+            Material = material;
         }
 
         
         public void SetLength(int lengthInt)
         {
-            length = lengthInt;
+            Length = lengthInt;
         }            
         public void SetDiameter(int diameterInt)
         {
-            diameter = diameterInt;
+            Diameter = diameterInt;
         }            
         public void SetMaterial(string materialString)
         {
-            material = materialString;
+            Material = materialString;
         }
         public string Content()
         {
